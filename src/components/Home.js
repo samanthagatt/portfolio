@@ -5,19 +5,21 @@ const useStyles = makeStyles(() => ({
   fullScreen: {
     height: "100vh",
     width: "100vw",
+    minHeight: "10em",
     backgroundImage: "url('code.png')",
     backgroundSize: "cover",
-    backgroundPosition: "center"
+    backgroundPosition: "center",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
   },
   home: {
     color: "white",
+    textShadow: "0 0 10px rgba(200, 200, 200, 0.4)",
     display: "inline-flex",
     position: "relative",
     flexDirection: "column",
-    alignItems: "flex-end",
-    top: "50vh",
-    marginLeft: "3em",
-    transform: "translateY(-50%)",
+    alignItems: "flex-end"
   },
   typedFirst: {
     textAlign: "right",
@@ -26,7 +28,7 @@ const useStyles = makeStyles(() => ({
     whiteSpace: "nowrap",
     width: 0,
     marginBottom: "0.5em",
-    animation: "$type-text 4s steps(20, end) forwards, $blink-cursor .75s step-end infinite"
+    animation: "$type-text 4s steps(40, end) forwards, $blink-cursor 0.75s step-end 7"
   },
   typedSecond: {
     textAlign: "right",
@@ -34,7 +36,7 @@ const useStyles = makeStyles(() => ({
     borderRight: "13px solid transparent",
     whiteSpace: "nowrap",
     width: 0,
-    animation: "$type-text 4s steps(20, end) 4.5s forwards, $blink-cursor .75s step-end infinite 4.5s"
+    animation: "$type-text 4s steps(40, end) 5s forwards, $blink-cursor .75s step-end infinite 5s"
   },
   "@keyframes type-text": {
     from: { width: 0 },
