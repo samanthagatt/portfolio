@@ -4,7 +4,6 @@ import { Typography, makeStyles } from "@material-ui/core";
 const useStyles = makeStyles(() => ({
   fullScreen: {
     height: "100vh",
-    width: "100vw",
     minHeight: "10em",
     backgroundImage: "url('code.png')",
     backgroundSize: "cover",
@@ -14,8 +13,8 @@ const useStyles = makeStyles(() => ({
     alignItems: "center"
   },
   home: {
-    color: "rgb(200, 200, 200)",
-    textShadow: "0 0 10px rgba(200, 200, 200, 0.4)",
+    color: "rgb(210, 210, 210)",
+    textShadow: "0 0 10px rgba(210, 210, 210, 0.4)",
     display: "inline-flex",
     position: "relative",
     flexDirection: "column",
@@ -43,7 +42,7 @@ const useStyles = makeStyles(() => ({
     to: { width: "100%" }
   },
   "@keyframes blink-cursor": {
-    "from, to": { borderColor: "rgb(200, 200, 200)" },
+    "from, to": { borderColor: "rgb(210, 210, 210)" },
     "50%": { borderColor: "transparent" }
   }
 }));

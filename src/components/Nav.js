@@ -4,10 +4,10 @@ import MenuIcon from "@material-ui/icons/Menu";
 
 const useStyles = makeStyles(() => ({
   navBar: {
-    backgroundColor: "rgba(200, 200, 200, 0.4)"
+    backgroundColor: "rgba(210, 210, 210, 0.4)"
   },
   navDrawer: {
-    color: "rgb(200, 200, 200)",
+    color: "rgb(210, 210, 210)",
     backgroundColor: "rgb(60, 60, 60)"
   }
 }));
@@ -27,7 +27,7 @@ const Nav = () => {
           onClose={() => setMenuDisplayed(false)}
           onOpen={() => setMenuDisplayed(true)}>
             <List onClick={() => setMenuDisplayed(false)}>
-              {["Home", "Projects", "About", "Contact"].map(text => (
+              {["Home", "Projects", "About"].map(text => (
                 <ListItem button component="a" href={`#${text.toLowerCase()}`} key={text}>
                   <ListItemText primary={text}/>
                 </ListItem>
