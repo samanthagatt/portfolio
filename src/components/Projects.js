@@ -29,7 +29,6 @@ const useStyles = makeStyles(() => ({
   projects: {
     minHeight: "100vh",
     width: "100vw",
-    background: "rgb(47, 47, 47)",
     color: "rgb(210, 210, 210)",
     textAlign: "center"
   },
@@ -42,10 +41,10 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-const Projects = () => {
+const Projects = ({id}) => {
   const classes = useStyles();
   return (
-    <section id="projects" className={classes.projects}>
+    <section id={id} className={classes.projects}>
       <Typography className={classes.title} variant="h2">Projects</Typography>
       <Grid container className={classes.list} justify="center" alignItems="center">
         {projectsArr.map(([title, body, link]) => (

@@ -3,6 +3,7 @@ import { ThemeProvider, createMuiTheme } from "@material-ui/core";
 import Home from './components/Home';
 import Nav from './components/Nav';
 import Projects from './components/Projects';
+import About from './components/About';
 
 const theme = createMuiTheme({
   typography: {
@@ -17,7 +18,8 @@ function App() {
       <Home id="home"
         title="Samantha Gatt" 
         details="iOS Developer" />
-      <Projects />
+      <Projects id="projects" />
+      <About id="about" />
     </ThemeProvider>
   );
 }
