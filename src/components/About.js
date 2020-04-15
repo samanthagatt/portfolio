@@ -33,14 +33,16 @@ const About = ({id}) => {
         className={classes.button}
         variant="contained" 
         href="https://github.com/samanthagatt"
-        target="_blank">
+        target="_blank"
+        rel="noopener noreferrer">
           GitHub
       </Button>
       <Button 
         className={classes.button}
         variant="contained" 
         href="https://www.linkedin.com/in/samantha-gatt/"
-        target="_blank">
+        target="_blank"
+        rel="noopener noreferrer">
           LinkedIn
       </Button>
       <Button 

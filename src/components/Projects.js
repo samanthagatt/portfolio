@@ -47,8 +47,8 @@ const Projects = ({id}) => {
     <section id={id} className={classes.projects}>
       <Typography className={classes.title} variant="h2">Projects</Typography>
       <Grid container className={classes.list} justify="center" alignItems="center">
-        {projectsArr.map(([title, body, link]) => (
-          <ProjectCard title={title} body={body} link={link} />
+        {projectsArr.map(([title, body, link], i) => (
+          <ProjectCard key={i} title={title} body={body} link={link} />
         ))}
       </Grid>
     </section>

@@ -22,6 +22,7 @@ const ProjectCard = ({title, body, link}) => {
       component="a" 
       href={link} 
       target="_blank"
+      rel="noopener noreferrer"
       style={{textDecoration: "none"}}>
         <Card className={classes.card}>
           <Typography variant="h3" gutterBottom>{title}</Typography>
