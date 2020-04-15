@@ -14,7 +14,7 @@ const useStyles = makeStyles(() => ({
     alignItems: "center"
   },
   home: {
-    color: "white",
+    color: "rgb(200, 200, 200)",
     textShadow: "0 0 10px rgba(200, 200, 200, 0.4)",
     display: "inline-flex",
     position: "relative",
@@ -24,7 +24,7 @@ const useStyles = makeStyles(() => ({
   typedFirst: {
     textAlign: "right",
     overflow: "hidden",
-    borderRight: "13px solid transparent",
+    borderRight: "0.45em solid transparent",
     whiteSpace: "nowrap",
     width: 0,
     marginBottom: "0.5em",
@@ -33,7 +33,7 @@ const useStyles = makeStyles(() => ({
   typedSecond: {
     textAlign: "right",
     overflow: "hidden",
-    borderRight: "13px solid transparent",
+    borderRight: "0.45em solid transparent",
     whiteSpace: "nowrap",
     width: 0,
     animation: "$type-text 4s steps(40, end) 5s forwards, $blink-cursor .75s step-end infinite 5s"
@@ -43,15 +43,15 @@ const useStyles = makeStyles(() => ({
     to: { width: "100%" }
   },
   "@keyframes blink-cursor": {
-    "from, to": { borderColor: "white" },
+    "from, to": { borderColor: "rgb(200, 200, 200)" },
     "50%": { borderColor: "transparent" }
   }
 }));
 
-const Home = ({title, details}) => {
+const Home = ({title, details, id}) => {
   const classes = useStyles();
   return (
-    <div className={classes.fullScreen}>
+    <div className={classes.fullScreen} id={id}>
       <section className={classes.home}>
         <Typography className={classes.typedFirst} variant="h1">
           {title}
