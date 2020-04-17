@@ -1,0 +1,14 @@
+.about-section {
+  text-align: center;
+}
+
+.about-buttons-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-button {
+  font-size: 1.3rem;
+  margin: 0.75rem;
+}

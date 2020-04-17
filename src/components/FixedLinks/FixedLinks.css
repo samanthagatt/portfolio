@@ -1,0 +1,15 @@
+#main-links {
+  display: inline-block;
+  position: fixed;
+  /* Must be equal to bottom padding in .fixed-link */
+  bottom: 0.5em;
+  right: 2em;
+}
+
+.fixed-link {
+  /* Bottom padding must be equal to bottom in #main-links */
+  padding: 0.5em 1em;
+  margin: 1em;
+  border-radius: 1em 1em 0 0;
+  border: 1px solid rgba(47, 47, 47, 0.4);
+}

@@ -1,0 +1,57 @@
+.center-txt {
+  text-align: center;
+}
+
+.main-bg, .main-bg-txt {
+  background-color: rgb(47, 47, 47);
+}
+
+.main-txt, .main-bg-txt {
+  color: rgb(250, 250, 250);
+}
+
+.main-txt-shadow {
+  text-shadow: 0 0 10px rgba(250, 250, 250, 0.4);
+}
+
+.contrast-bg, .contrast-bg-txt, .contrast-bg-txt-w-hover {
+  background: rgb(210, 210, 210);
+}
+
+.contrast-txt, .contrast-bg-txt, .contrast-bg-txt-w-hover {
+  color: rgb(47, 47, 47);
+}
+
+.contrast-bg-txt-w-hover:hover {
+  color: rgb(40, 40, 40);
+  background: rgb(180, 180, 180);
+}
+
+.sheer-bg, .sheer-bg-w-hover {
+  background: rgb(250, 250, 250, 0.4);
+}
+
+.sheer-bg-w-hover:hover {
+  background: rgba(250, 250, 250, 0.5);
+}
+
+.hover-on-sheer-bg:hover {
+  background: rgba(250, 250, 250, 0.1);
+}
+
+.full-screen {
+  min-height: 100vh;
+}
+
+.code-bg-img {
+  background-image: url(./code.png);
+  background-size: cover;
+  background-position: left;
+}
+
+.section-title {
+  /* Same padding-top as .home-title margin-top in Home.css */
+  padding-top: 5rem;
+  padding-bottom: 1.25rem;
+  text-align: center;
+}

@@ -1,17 +1,27 @@
+@font-face {
+  font-family: OpenDyslexicFont;
+  src: url(./OpenDyslexic-Regular.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   background-color: rgb(47, 47, 47);
+  color: rgb(250, 250, 250);
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: OpenDyslexicFont, Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  text-decoration: none;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: OpenDyslexicFont, source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
