@@ -10,6 +10,7 @@ import Projects from "./components/Projects/Projects";
 import { sections, fixedLinks, aboutLInks, projects } from "./data";
 
 import "./App.css";
+import "./MediaQueries.css";
 
 const theme = createMuiTheme({
   typography: {
@@ -22,13 +23,13 @@ function App() {
     <StylesProvider injectFirst>
       <ThemeProvider theme={theme}>
         <Nav sections={sections} />
-        <FixedLinks linksArr={fixedLinks} />
         <Home id={sections[0]}
           title="Samantha Gatt"
           subtitle="iOS Developer"
           nextSection={sections[1]} />
         <Projects section={sections[1]} projects={projects} />
         <About section={sections[2]} links={aboutLInks} />
+        <FixedLinks linksArr={fixedLinks} />
       </ThemeProvider>
     </StylesProvider>
   );
