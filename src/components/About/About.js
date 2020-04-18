@@ -13,7 +13,8 @@ const About = ({ section, links }) => {
           <Button
             key={name}
             className="contrast-bg-txt-w-hover about-button"
-            variant="contained" 
+            variant="contained"
+            size="large"
             href={url}
             target="_blank"
             rel="noopener noreferrer"

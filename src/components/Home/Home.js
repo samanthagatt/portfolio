@@ -18,7 +18,7 @@ const Home = ({title, subtitle, id, nextSection}) => {
         </Typography>
       </div>
       <div className="next-button" onClick={() => scrollToNextSection()}>
-        <Typography variant="h5">{nextSection}</Typography>
+        <Typography variant="h5" gutterBottom>{nextSection}</Typography>
         <svg viewBox="0 0 800 350" className="down-arrow-svg">
           <g transform="matrix(1,0,0,1,0,8)">
             <path d="M30,30L400,300L770,33" className="down-arrow-line" />
