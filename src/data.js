@@ -31,8 +31,13 @@ export const aboutLInks = [
 
 export const projects = [
   [
+    "Dream App", 
+    "Currently in development. An app that will allow users to record themselves retelling their dreams, transcribe the audio into text, and share their dreams with their friends.",
+    "https://github.com/samanthagatt/Dream-App-iOS"
+  ],
+  [
     "Copy List", 
-    "An iOS app that aids in converting Spotify playlists to Apple Music playlists and vice versa",
+    "An iOS app that aids in converting Spotify playlists to Apple Music playlists and vice versa. Not finished, on pause.",
     "https://github.com/samanthagatt/CopyList"
   ],
   [
@@ -47,7 +52,7 @@ export const projects = [
   ],
   [
     "Flashcards",
-    "An app that lets you create and organize flashcards whether they're typed or hand drawn on an iOS device. Made as an independent project during my education at Lambda School",
+    "An app that lets you create and organize flashcards whether they're typed or hand drawn on an iOS device. Made as an independent project during my education at Lambda School.",
     "https://github.com/samanthagatt/Flashcards-App"
   ]
 ];
