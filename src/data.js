@@ -24,7 +24,7 @@ export const aboutLInks = [
   },
   {
     name: "Resume",
-    url: "Samantha_Gatt_Software_Developer_Resume.pdf",
+    url: "Samantha_Gatt_iOS_Developer_Resume.pdf",
     download: true
   }
 ];
