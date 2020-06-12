@@ -32,7 +32,7 @@ export const aboutLInks = [
 export const projects = [
   [
     "Nonograms", 
-    "A fun puzzle game where you reveal a pixelated picture by logically filling in squares on a grid based on the its rules",
+    "A fun puzzle game where you reveal a pixelated picture by logically filling in squares on a grid based on the puzzle's rules",
     "https://github.com/samanthagatt/Nonograms"
   ],
   [
