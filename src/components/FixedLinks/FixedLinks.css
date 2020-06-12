@@ -12,4 +12,5 @@
   margin: 1em;
   border-radius: 1em 1em 0 0;
   border: 1px solid rgba(47, 47, 47, 0.4);
+  text-shadow: 0 0 5px black;
 }

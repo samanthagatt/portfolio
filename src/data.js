@@ -31,6 +31,11 @@ export const aboutLInks = [
 
 export const projects = [
   [
+    "Nonograms", 
+    "A fun puzzle game where you reveal a pixelated picture by logically filling in squares on a grid based on the its rules",
+    "https://github.com/samanthagatt/Nonograms"
+  ],
+  [
     "Dream App", 
     "Currently in development. An app that will allow users to record themselves retelling their dreams, transcribe the audio into text, and share their dreams with their friends.",
     "https://github.com/samanthagatt/Dream-App-iOS"
