@@ -14,26 +14,24 @@ export const fixedLinks = [
 export const aboutLInks = [
   {
     name: "Github", 
-    url: "https://github.com/samanthagatt",
-    download: false
+    url: "https://github.com/samanthagatt"
   },
   {
     name: "LinkedIn", 
     url: "https://www.linkedin.com/in/samantha-gatt/",
-    download: false
   },
   {
     name: "Resume",
-    url: "Samantha_Gatt_iOS_Developer_Resume.pdf",
-    download: true
+    url: "https://docs.google.com/document/d/1H4CQ3fYosgIbOfVMzZiXn6JbqOz1vHemEbzogNn3xy8/edit?usp=sharing"
   }
 ];
 
 export const projects = [
   [
-    "Nonograms", 
+    "Paint a Pic", 
     "A fun puzzle game where you reveal a pixelated picture by logically filling in squares on a grid based on the puzzle's rules",
-    "https://github.com/samanthagatt/Nonograms"
+    "https://github.com/samanthagatt/Nonograms",
+    "https://apps.apple.com/us/app/paint-a-pic/id1523554689"
   ],
   [
     "Dream App", 

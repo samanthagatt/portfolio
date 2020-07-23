@@ -9,7 +9,7 @@ const About = ({ section, links }) => {
     <section id={section} className="full-screen about-section">
       <Typography className="section-title" variant="h2">{section}</Typography>
       <div className="about-buttons-list">
-        {links.map(({name, url, download}) => (
+        {links.map(({name, url}) => (
           <Button
             key={name}
             className="contrast-bg-txt-w-hover about-button"
@@ -17,8 +17,7 @@ const About = ({ section, links }) => {
             size="large"
             href={url}
             target="_blank"
-            rel="noopener noreferrer"
-            download={download}>
+            rel="noopener noreferrer">
               {name}
           </Button>
         ))}

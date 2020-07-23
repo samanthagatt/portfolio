@@ -4,3 +4,19 @@
   margin: 1em;
   text-align: center;
 }
+
+.github-svg, .appstore-svg {
+  height: 40px;
+  fill: rgb(47, 47, 47);
+}
+.github-svg:hover, .appstore-svg:hover {
+  fill: rgba(47, 47, 47, 0.6);
+}
+
+.github-path {
+  fill-rule: evenodd;
+}
+
+.appstore-path {
+  fill: rgb(210, 210, 210);
+}
