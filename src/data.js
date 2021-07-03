@@ -28,6 +28,12 @@ export const aboutLInks = [
 
 export const projects = [
   [
+    "Electrify America",
+    "The Electrify America app lets you find a charging station nearby, charge your EV, and manage your charging session. Now includes managing charging at home on personal L2 chargers.",
+    "",
+    "https://apps.apple.com/us/app/electrify-america/id1458030456"
+  ],
+  [
     "Paint a Pic", 
     "A fun puzzle game where you reveal a pixelated picture by logically filling in squares on a grid based on the puzzle's rules",
     "https://github.com/samanthagatt/Nonograms",
@@ -35,8 +41,9 @@ export const projects = [
   ],
   [
     "Dream App", 
-    "Currently in development. An app that will allow users to record themselves retelling their dreams, transcribe the audio into text, and share their dreams with their friends.",
-    "https://github.com/samanthagatt/Dream-App-iOS"
+    "An app that allows users to record themselves retelling their dreams. ~ In the works: transcribing the audio into text, and sharing dreams with friends.",
+    "https://github.com/samanthagatt/Dream-App-iOS",
+    "https://apps.apple.com/ng/app/dream-studio-record-dreams/id1537146810"
   ],
   [
     "Copy List", 
