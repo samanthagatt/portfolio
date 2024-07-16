@@ -1,24 +1,40 @@
-.menu-button {
-  padding: 0.5rem
+#app-bar {
+  background-color: rgb(255, 255, 255);
+  box-shadow: none;
 }
 
-.menu-icon {
+#main-nav-icon, .social-icon {
+  fill: rgb(0, 0, 0);
   width: 2.5rem;
   height: 2.5rem;
-  fill-rule: evenodd;
-  clip-rule: evenodd;
-  stroke-linejoin: round;
-  stroke-miterlimit: 2;
+  flex-shrink: 0;
 }
 
-.nav-drawer {
-  background: rgb(60, 60, 60);
+#main-nav-icon {
+  padding-right: 1.5rem;
+  /* Adding some padding to the top to make up for the descender of the g in the logo */
+  padding-top: 0.5rem;
 }
 
 .nav-item {
   text-align: center;
+  font-size: 1rem;
+  padding: 0 1rem;
 }
 
 .nav-item:hover {
-  background-color: rgb(53, 53, 53);
+  color: rgb(125, 125, 125);
+}
+
+#socials {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.social-icon {
+  padding-left: 1rem;
+}
+
+.social-icon:hover {
+  fill: rgb(125, 125, 125);
 }

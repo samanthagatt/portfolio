@@ -31,10 +31,10 @@ const ProjectCard = ({info: [title, body, github, appstore]}) => {
   )
 }
 
-const Projects = ({section, projects}) => {
+const Projects = ({sectionInfo, projects}) => {
   return (
-    <section id={section} className="full-screen">
-      <Typography className="section-title" variant="h2">{section}</Typography>
+    <section id={sectionInfo.name} className="full-screen">
+      <Typography className="section-title" variant="h2">{sectionInfo.name}</Typography>
       <Grid container
         justifyContent="center"
         alignItems="center">

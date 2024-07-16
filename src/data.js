@@ -1,5 +1,3 @@
-export const sections = ["Home", "Projects", "About"];
-
 export const fixedLinks = [
   {
     name: "Source code",
@@ -10,6 +8,11 @@ export const fixedLinks = [
     url: "https://opendyslexic.org/"
   },
 ];
+
+export const socials = {
+  github: "https://github.com/samanthagatt",
+  linkedIn: "https://www.linkedin.com/in/samantha-gatt/"
+}
 
 export const aboutLInks = [
   {

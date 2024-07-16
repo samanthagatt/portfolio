@@ -4,10 +4,10 @@ import { Typography, Button } from "@mui/material";
 
 import "./About.css";
 
-const About = ({ section, links }) => {
+const About = ({ sectionInfo, links }) => {
   return (
-    <section id={section} className="full-screen about-section">
-      <Typography className="section-title" variant="h2">{section}</Typography>
+    <section id={sectionInfo.name} className="full-screen about-section">
+      <Typography className="section-title" variant="h2">{sectionInfo.name}</Typography>
       <div className="about-buttons-list">
         {links.map(({name, url}) => (
           <Button
