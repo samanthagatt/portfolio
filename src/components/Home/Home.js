@@ -10,10 +10,10 @@ const Home = ({title, subtitle, id, nextSection}) => {
   return (
     <section className="full-screen code-bg-img home-section" id={id}>
       <div className="main-txt-shadow home-main-content">
-        <Typography className="typed home-title" variant="h1">
+        <Typography className="home-title" variant="h1">
           {title}
         </Typography>
-        <Typography className="typed home-subtitle" variant="h2">
+        <Typography className="home-subtitle" variant="h2">
           {subtitle}
         </Typography>
       </div>

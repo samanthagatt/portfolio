@@ -15,7 +15,7 @@ import "./MediaQueries.css";
 
 const theme = createTheme({
   typography: {
-    fontFamily: "OpenDyslexicFont, Roboto, Helvetica, Arial, sans-serif"
+    fontFamily: "Montserrat, Roboto, Helvetica, Arial, sans-serif"
   }
 });
 

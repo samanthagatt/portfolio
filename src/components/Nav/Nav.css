@@ -5,6 +5,10 @@
 .menu-icon {
   width: 2.5rem;
   height: 2.5rem;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  stroke-linejoin: round;
+  stroke-miterlimit: 2;
 }
 
 .nav-drawer {
