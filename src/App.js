@@ -28,8 +28,7 @@ function App() {
         "name": "Home",
         "component": (name, index) => <Home
             sectionInfo={{ "name": name, "index": index }}
-            title="Samantha Gatt" subtitle="iOS Developer"
-            scrollToNextSection={() => scrollToSection(sections[index + 1].id)} />
+            title="Samantha Gatt" subtitle="iOS Developer" />
     }
     const projectsSection = {
         "name": "Projects",

@@ -3,24 +3,22 @@ import { Typography } from "@mui/material";
 
 import "./Home.css";
 
-const Home = ({title, subtitle, sectionInfo, scrollToNextSection}) => {
+const Home = ({ sectionInfo }) => {
   return (
-    <section className="home-section main-content" id={sectionInfo.name}>
-      <div className="home-main-content">
-        <Typography id="home-title" variant="h1">
-          {title}
+    <section id={sectionInfo.name} className="main-content">
+      <div id="home-section">
+        <Typography variant="h1" id="home-title" className="home-content">
+          Samantha Gatt
         </Typography>
-        <Typography id="home-subtitle" variant="h2">
-          {subtitle}
-        </Typography>
+        <div className="home-content">
+          <Typography variant="h2" id="home-subtitle">
+            Software Engineer specialized in mobile iOS development
+          </Typography>
+          <Typography variant="h3" id="home-description">
+            Result-oriented with superior problem-solving and critical thinking skills to tackle problems and develop innovative solutions.
+          </Typography>
+        </div>
       </div>
-      <button className="next-button" onClick={() => scrollToNextSection()}>
-        <svg viewBox="0 0 800 350" className="down-arrow-svg">
-          <g transform="matrix(1,0,0,1,0,8)">
-            <path d="M30,30L400,300L770,33" className="down-arrow-line" />
-          </g>
-        </svg>
-      </button>
     </section>
   )
 };

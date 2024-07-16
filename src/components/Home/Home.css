@@ -1,53 +1,34 @@
-.home-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
+#home {
+  /* Same margin-top as .section-title padding-top in App.css */
+  margin-top: 5rem;
 }
 
-.home-main-content {
-  flex-grow: 1;
+#home-section {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  gap: 2rem;
   align-items: flex-end;
-  margin-bottom: 2rem;
+  padding-top: 10rem;
+  margin-bottom: 2.5em;
+  width: 100%
+}
+
+.home-content {
+  flex: 1;
 }
 
 #home-title {
-  /* Same margin-top as .section-title padding-top in App.css */
-  margin-top: 5rem;
-  padding-top: 5rem;
-  margin-bottom: 0.5em;
-  width: 100%;
+  font-size: 4rem;
+  font-weight: 400;
 }
 
 #home-subtitle {
-  width: 100%;
+  font-size: 2rem;
+  font-weight: 500;
 }
 
-.next-button {
-  stroke: rgb(250, 250, 250);
-  text-align: center;
-}
-
-.next-button:hover {
-  cursor: pointer;
-  color: rgb(200, 200, 200);
-  stroke: rgb(200, 200, 200)
-}
-
-.down-arrow-svg {
-  margin-bottom: 1em;
-  width: 8rem;
-  fill-rule: evenodd;
-  clip-rule: evenodd;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 1.5;
-}
-
-.down-arrow-line {
-  fill: none;
-  stroke-width: 41;
+#home-description {
+  font-size: 1rem;
+  padding-top: 1.5rem;
+  font-weight: 500;
+  color: rgb(100, 100, 100);
 }

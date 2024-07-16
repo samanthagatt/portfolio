@@ -24,10 +24,10 @@ const Nav = ({ sections, scrollToSection }) => {
           ))}
         </Stack>
         <div id="socials">
-          <a href={socials.github} target="_blank">
+          <a href={socials.linkedIn} target="_blank">
             <LinkedInLogo className="social-icon" />
           </a>
-          <a href={socials.linkedIn} target="_blank">
+          <a href={socials.github} target="_blank">
             <GitHubLogo className="social-icon" />
           </a>
         </div>
