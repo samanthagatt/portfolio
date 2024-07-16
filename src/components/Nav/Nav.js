@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { AppBar, Toolbar, IconButton, SwipeableDrawer, ListItem, ListItemText, List } from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
+import { AppBar, Toolbar, IconButton, SwipeableDrawer, ListItem, ListItemText, List } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 
 import "./Nav.css";
 

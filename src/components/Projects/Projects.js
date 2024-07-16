@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Card, Typography } from "@material-ui/core";
+import { Grid, Card, Typography } from "@mui/material";
 
 import "./Projects.css";
 
@@ -36,7 +36,7 @@ const Projects = ({section, projects}) => {
     <section id={section} className="full-screen">
       <Typography className="section-title" variant="h2">{section}</Typography>
       <Grid container
-        justify="center"
+        justifyContent="center"
         alignItems="center">
           {projects.map((info, i) => (
             <ProjectCard key={i} info={info} />

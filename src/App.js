@@ -1,5 +1,6 @@
 import React from "react";
-import { StylesProvider, createMuiTheme, ThemeProvider } from "@material-ui/core";
+import { StyledEngineProvider, ThemeProvider } from '@mui/material';
+import { createTheme } from '@mui/material/styles';
 
 import FixedLinks from "./components/FixedLinks/FixedLinks";
 import Nav from "./components/Nav/Nav";
@@ -12,7 +13,7 @@ import { sections, fixedLinks, aboutLInks, projects } from "./data";
 import "./App.css";
 import "./MediaQueries.css";
 
-const theme = createMuiTheme({
+const theme = createTheme({
   typography: {
     fontFamily: "OpenDyslexicFont, Roboto, Helvetica, Arial, sans-serif"
   }
@@ -20,7 +21,7 @@ const theme = createMuiTheme({
 
 function App() {
   return (
-    <StylesProvider injectFirst>
+    <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>
         <Nav sections={sections} />
         <Home id={sections[0]}
@@ -31,7 +32,7 @@ function App() {
         <About section={sections[2]} links={aboutLInks} />
         <FixedLinks linksArr={fixedLinks} />
       </ThemeProvider>
-    </StylesProvider>
+    </StyledEngineProvider>
   );
 }
 

@@ -1,6 +1,6 @@
 import React from "react";
 import PropType from "prop-types";
-import { Typography, Button } from "@material-ui/core";
+import { Typography, Button } from "@mui/material";
 
 import "./About.css";
 
