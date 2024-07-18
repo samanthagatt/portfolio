@@ -9,25 +9,25 @@ import SGLogo from "./SGLogo.js"
 import LinkedInLogo from "./LinkedInLogo.js";
 import GitHubLogo from "./GitHubLogo.js";
 
-const Nav = ({ sections, scrollToSection }) => {
+const Nav = ({ sectionIds, scrollToSection }) => {
   return (
     <AppBar position="fixed" id="app-bar">
       <Toolbar component="nav" className="main-content">
         <SGLogo />
         <Stack direction="row">
-          {sections.map(section => (
+          {sectionIds.map(id => (
             <button
               className="nav-item"
-              onClick={() => scrollToSection(section.name)}>
-              {section.name}
+              onClick={() => scrollToSection(id)}>
+              {id.charAt(0).toUpperCase() + id.slice(1)}
             </button>
           ))}
         </Stack>
         <div id="socials">
-          <a href={socials.linkedIn} target="_blank">
+          <a href={socials.linkedIn} target="_blank" rel="noopener noreferrer">
             <LinkedInLogo className="social-icon" />
           </a>
-          <a href={socials.github} target="_blank">
+          <a href={socials.gitHub} target="_blank" rel="noopener noreferrer">
             <GitHubLogo className="social-icon" />
           </a>
         </div>
@@ -37,7 +37,8 @@ const Nav = ({ sections, scrollToSection }) => {
 };
 
 Nav.propTypes = {
-  sections: PropTypes.arrayOf(PropTypes.string).isRequired
+  sectionIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+  scrollToSection: PropTypes.func.isRequired
 }
 
 export default Nav;

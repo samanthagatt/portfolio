@@ -2,13 +2,8 @@ import React from "react";
 import { StyledEngineProvider, ThemeProvider } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 
-import FixedLinks from "./components/FixedLinks/FixedLinks";
 import Nav from "./components/Nav/Nav";
 import Home from "./components/Home/Home";
-import About from "./components/About/About";
-import Projects from "./components/Projects/Projects";
-
-import { fixedLinks, aboutLInks, projects } from "./data";
 
 import "./App.css";
 import "./MediaQueries.css";
@@ -19,40 +14,37 @@ const theme = createTheme({
     }
 });
 
-const scrollToSection = (section) => {
-    document.getElementById(section).scrollIntoView({ behavior: "smooth" })
+const homeSection = {
+    id: "home",
+    component: (id, index) => <Home
+        sectionInfo={{ "id": id, "index": index }}
+        scrollToExperience={() => scrollToSection(experienceSection.id)} />
+}
+const experienceSection = {
+    id: "experience",
+    component: (id, index) => <div id="experience"></div>
+}
+const skillsSection = {
+    id: "skills",
+    component: (id, index) => <div id="skills"></div>
+}
+const educationSection = {
+    id: "education",
+    component: (id, index) => <div id="education"></div>
+}
+const sections = [homeSection, experienceSection, skillsSection, educationSection]
+
+const scrollToSection = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" })
 }
 
-function App() {
-    const homeSection = {
-        "name": "Home",
-        "component": (name, index) => <Home
-            sectionInfo={{ "name": name, "index": index }}
-            title="Samantha Gatt" subtitle="iOS Developer" />
-    }
-    const projectsSection = {
-        "name": "Projects",
-        "component": (name, index) => <Projects
-            sectionInfo={{ "name": name, "index": index }}
-            projects={projects} />
-    }
-    const aboutSection = {
-        "name": "About",
-        "component": (name, index) => <About
-            sectionInfo={{ "name": name, "index": index }}
-            links={aboutLInks} />
-    }
-    const sections = [homeSection, projectsSection, aboutSection]
-    return (
-        <StyledEngineProvider injectFirst>
-            <ThemeProvider theme={theme}>
-                <Nav sections={sections}
-                    scrollToSection={scrollToSection} />
-                {sections.map((section, index) => section.component(section.name, index))}
-                <FixedLinks linksArr={fixedLinks} />
-            </ThemeProvider>
-        </StyledEngineProvider>
-    );
-}
+const App = () =>
+    <StyledEngineProvider injectFirst>
+        <ThemeProvider theme={theme}>
+            <Nav sectionIds={sections.map((section) => section.id)}
+                scrollToSection={scrollToSection} />
+            {sections.map((section, index) => section.component(section.id, index))}
+        </ThemeProvider>
+    </StyledEngineProvider>
 
 export default App;

@@ -1,7 +1,23 @@
 button {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+.MuiTypography-button {
+  text-transform: none;
 }
 
 .main-content {
@@ -45,7 +61,7 @@ button {
   min-height: 100vh;
 }
 
-.section-title {
+.sections-first-content {
   /* Same padding-top as .home-title margin-top in Home.css */
   padding-top: 5rem;
   padding-bottom: 1.25rem;

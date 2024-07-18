@@ -1,34 +1,66 @@
-#home {
-  /* Same margin-top as .section-title padding-top in App.css */
-  margin-top: 5rem;
-}
-
 #home-section {
   display: flex;
   gap: 2rem;
   align-items: flex-end;
   padding-top: 10rem;
-  margin-bottom: 2.5em;
+  padding-bottom: 10em;
   width: 100%
 }
 
-.home-content {
+.home-section-content {
   flex: 1;
 }
 
-#home-title {
+#home-section-title {
   font-size: 4rem;
   font-weight: 400;
 }
 
-#home-subtitle {
-  font-size: 2rem;
-  font-weight: 500;
+#home-section-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-#home-description {
-  font-size: 1rem;
-  padding-top: 1.5rem;
+#home-section-subtitle {
+  font-size: 1.75rem;
   font-weight: 500;
-  color: rgb(100, 100, 100);
+  line-height: 3.25rem;
+}
+
+#home-section-description {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 2rem;
+  color: rgb(158, 158, 158);
+}
+
+#home-section-buttons {
+  display: flex;
+  gap: 1rem;
+  padding-top: 1.5rem;
+}
+
+.home-section-button {
+  font-size: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+#work-history-button {
+  background-color: black;
+  color: rgb(255, 255, 255);
+}
+
+#work-history-button:hover {
+  background-color: rgb(125, 125, 125);
+}
+
+#my-projects-button {
+  border: 0.1rem solid black;
+}
+
+#my-projects-button:hover {
+  color: rgb(125, 125, 125);
+  border: 0.1rem solid rgb(125, 125, 125);
 }
