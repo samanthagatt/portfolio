@@ -1,44 +1,69 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { AppBar, Toolbar } from "@mui/material";
-import { socials } from "../../data.js";
+import React, { useState } from "react";
+import { AppBar, Toolbar, SwipeableDrawer, IconButton, Divider, Button } from "@mui/material";
+import MenuIcon from '@mui/icons-material/Menu';
+import { Stack, useMediaQuery } from "@mui/system";
+import { useTheme } from "@emotion/react";
 
-import "./Nav.css";
-import { Stack } from "@mui/system";
-import SGLogo from "./SGLogo.js"
+import SGLogo from "./SGLogo.js";
 import LinkedInLogo from "./LinkedInLogo.js";
 import GitHubLogo from "./GitHubLogo.js";
+import { socials } from "../../data.js";
+
+const SocialLinks = ({ sx = [] }) =>
+  <Stack direction="row" spacing="1rem" justifyContent="center" sx={sx}>
+    <Button component="a"
+      href={socials.linkedIn}
+      target="_blank"
+      rel="noopener noreferrer">
+      <LinkedInLogo height="1.75rem" />
+    </Button>
+    <Button component="a"
+      href={socials.gitHub}
+      target="_blank"
+      rel="noopener noreferrer">
+      <GitHubLogo height="1.75rem" />
+    </Button>
+  </Stack>;
 
 const Nav = ({ sectionIds, scrollToSection }) => {
-  return (
-    <AppBar position="fixed" id="app-bar">
-      <Toolbar component="nav" className="main-content">
-        <SGLogo />
-        <Stack direction="row">
-          {sectionIds.map(id => (
-            <button
-              className="nav-item"
-              onClick={() => scrollToSection(id)}>
-              {id.charAt(0).toUpperCase() + id.slice(1)}
-            </button>
-          ))}
-        </Stack>
-        <div id="socials">
-          <a href={socials.linkedIn} target="_blank" rel="noopener noreferrer">
-            <LinkedInLogo className="social-icon" />
-          </a>
-          <a href={socials.gitHub} target="_blank" rel="noopener noreferrer">
-            <GitHubLogo className="social-icon" />
-          </a>
-        </div>
-      </Toolbar>
-    </AppBar>
-  )
-};
+  const theme = useTheme();
+  const mdUpBreakpoint = useMediaQuery(theme.breakpoints.up("md"));
+  const [menuDisplayed, setMenuDisplayed] = useState(false);
 
-Nav.propTypes = {
-  sectionIds: PropTypes.arrayOf(PropTypes.string).isRequired,
-  scrollToSection: PropTypes.func.isRequired
-}
+  const NavButtons = () =>
+    sectionIds.map(id => <>
+      <Button onClick={() => scrollToSection(id)} key={id}>
+        {id.charAt(0).toUpperCase() + id.slice(1)}
+      </Button>
+    </>);
+  const MenuButton = () =>
+    <IconButton aria-label="menu" onClick={() => setMenuDisplayed(true)}>
+      <MenuIcon color="primary" sx={{ height: "2rem", width: "auto" }} />
+    </IconButton>;
+
+  return (<AppBar position="fixed">
+    <Toolbar sx={{ justifyContent: "space-between" }}>
+      <Stack direction="row" spacing="2rem">
+        {/* Adding some padding to the top of the sg logo to make up for the descender of the g */}
+        <SGLogo height="2.5rem" style={{ paddingTop: "0.5rem" }} />
+        {mdUpBreakpoint &&
+          <Stack component="nav" direction="row" spacing="1.25rem">
+            {<NavButtons />}
+          </Stack>}
+      </Stack>
+      {mdUpBreakpoint ? <SocialLinks /> : <MenuButton theme={theme} />}
+      {!mdUpBreakpoint &&
+        <SwipeableDrawer open={menuDisplayed}
+          anchor="right"
+          onClose={() => setMenuDisplayed(false)}
+          onOpen={() => setMenuDisplayed(true)}>
+          <Stack component="nav" spacing="2rem" sx={{ p: "2rem 3rem" }}>
+            <NavButtons />
+            <SocialLinks sx={{ pt: "1rem" }} />
+          </Stack>
+        </SwipeableDrawer>}
+    </Toolbar>
+  </AppBar>)
+};
 
 export default Nav;

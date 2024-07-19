@@ -2,49 +2,44 @@ import React from "react";
 import { StyledEngineProvider, ThemeProvider } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 
+import { evenOrOdd } from "./convenienceFunctions";
+import { theme } from "./theme";
 import Nav from "./components/Nav/Nav";
-import Home from "./components/Home/Home";
+import Home from "./components/Home";
+import Section from "./components/Section";
 
 import "./App.css";
-import "./MediaQueries.css";
-
-const theme = createTheme({
-    typography: {
-        fontFamily: "Montserrat, Roboto, Helvetica, Arial, sans-serif"
-    }
-});
 
 const homeSection = {
     id: "home",
-    component: (id, index) => <Home
-        sectionInfo={{ "id": id, "index": index }}
+    component: (id, index) => <Home key={index} sectionInfo={{ "id": id, "index": index }}
         scrollToExperience={() => scrollToSection(experienceSection.id)} />
-}
+};
 const experienceSection = {
     id: "experience",
-    component: (id, index) => <div id="experience"></div>
-}
+    component: (id, index) => <Section variant={evenOrOdd(index+1)} id="experience" className="full-screen" key={index}></Section>
+};
 const skillsSection = {
     id: "skills",
-    component: (id, index) => <div id="skills"></div>
-}
+    component: (id, index) => <Section variant={evenOrOdd(index+1)} id="skills" className="full-screen" key={index}></Section>
+};
 const educationSection = {
     id: "education",
-    component: (id, index) => <div id="education"></div>
-}
-const sections = [homeSection, experienceSection, skillsSection, educationSection]
+    component: (id, index) => <Section variant={evenOrOdd(index+1)} id="education" className="full-screen" key={index}></Section>
+};
+const sections = [homeSection, experienceSection, skillsSection, educationSection];
 
 const scrollToSection = (id) => {
     document.getElementById(id).scrollIntoView({ behavior: "smooth" })
-}
+};
 
 const App = () =>
     <StyledEngineProvider injectFirst>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={createTheme(theme)}>
             <Nav sectionIds={sections.map((section) => section.id)}
                 scrollToSection={scrollToSection} />
             {sections.map((section, index) => section.component(section.id, index))}
         </ThemeProvider>
-    </StyledEngineProvider>
+    </StyledEngineProvider>;
 
 export default App;
