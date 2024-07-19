@@ -7,18 +7,26 @@ import { useTheme } from "@emotion/react";
 import SGLogo from "./SGLogo.js";
 import LinkedInLogo from "./LinkedInLogo.js";
 import GitHubLogo from "./GitHubLogo.js";
-import { socials } from "../../data.js";
+import { externalLinks } from "../../data.js";
+import SourceCodeIcon from "../SourceCodeIcon.js";
 
 const SocialLinks = ({ sx = [] }) =>
   <Stack direction="row" spacing="1rem" justifyContent="center" sx={sx}>
+    <Button
+      component="a"
+      href={externalLinks.sourceCode}
+      target="_blank"
+      rel="noopener noreferrer">
+      <SourceCodeIcon height="1.25rem" />
+    </Button>
     <Button component="a"
-      href={socials.linkedIn}
+      href={externalLinks.linkedIn}
       target="_blank"
       rel="noopener noreferrer">
       <LinkedInLogo height="1.75rem" />
     </Button>
     <Button component="a"
-      href={socials.gitHub}
+      href={externalLinks.gitHub}
       target="_blank"
       rel="noopener noreferrer">
       <GitHubLogo height="1.75rem" />

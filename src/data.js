@@ -1,26 +1,29 @@
-export const socials = {
+export const externalLinks = {
   gitHub: "https://github.com/samanthagatt",
-  linkedIn: "https://www.linkedin.com/in/samantha-gatt/"
+  sourceCode: "https://github.com/samanthagatt/portfolio/tree/master",
+  linkedIn: "https://www.linkedin.com/in/samantha-gatt/",
+  resume: "https://docs.google.com/document/d/1H4CQ3fYosgIbOfVMzZiXn6JbqOz1vHemEbzogNn3xy8/edit?usp=sharing"
 };
 
-export const resumeLink = "https://docs.google.com/document/d/1H4CQ3fYosgIbOfVMzZiXn6JbqOz1vHemEbzogNn3xy8/edit?usp=sharing"
+
+export const sourceCodeLink = "";
 
 export const footerLInks = [
   {
     name: "GitHub", 
-    url: socials.gitHub
+    url: externalLinks.gitHub
   },
   {
     name: "LinkedIn", 
-    url: socials.linkedIn,
+    url: externalLinks.linkedIn,
   },
   {
     name: "Resume",
-    url: resumeLink
+    url: externalLinks.resume
   },
   {
     name: "Source code",
-    url: "https://github.com/samanthagatt/portfolio"
+    url: externalLinks.sourceCode
   }
 ];
 

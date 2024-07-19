@@ -1,4 +1,4 @@
-import { createBreakpoints } from "@mui/system";
+import { createTheme } from "@mui/system";
 
 export const primaryColor = "rgb(0, 0, 0)";
 export const secondaryColor = "rgb(255, 255, 255)";
@@ -6,45 +6,20 @@ export const accentColor1 = "rgb(158, 158, 158)";
 export const accentColor2 = "rgb(249, 249, 242)";
 
 export const appBarHeight = "4rem";
-export const contentHorizontalPadding = "130px";
 
-const breakpoints = createBreakpoints({});
-
-export const theme = {
-    breakpoints: breakpoints,
+export const baseTheme = createTheme({
+    breakpoints: {
+        values: {
+            xxs: 0,
+            xs: 350,
+            sm: 600,
+            md: 900,
+            lg: 1200,
+            xl: 1536,
+          }
+    },
     typography: {
         fontFamily: "Montserrat, Roboto, Helvetica, Arial, sans-serif",
-        h1: {
-            fontSize: "4rem",
-            fontWeight: "400",
-            [breakpoints.between("sm", "lg")]: {
-                fontSize: "3rem",
-                fontWeight: "450"
-            },
-            [breakpoints.down("sm")]: {
-                fontSize: "2rem",
-                fontWeight: "475"
-            }
-        },
-        h2: {
-            fontSize: "1.75rem",
-            fontWeight: "500",
-            lineHeight: "3.25rem",
-            [breakpoints.between("sm", "lg")]: {
-                fontSize: "1.5rem",
-                lineHeight: "3rem"
-            },
-            [breakpoints.down("sm")]: {
-                fontSize: "1.25rem",
-                lineHeight: "2.5rem"
-            }
-        },
-        h3: {
-            fontSize: "1rem",
-            fontWeight: "500",
-            lineHeight: "2rem",
-            color: accentColor1
-        }
     },
     palette: {
         primary: {
@@ -59,18 +34,70 @@ export const theme = {
         accent2: {
             main: accentColor2
         }
+    }
+});
+
+export const contentHorizontalPadding = {
+    paddingLeft: "130px",
+    paddingRight: "130px",
+    [baseTheme.breakpoints.between("md", "lg")]: {
+        paddingLeft: "100px",
+        paddingRight: "100px"
+    },
+    [baseTheme.breakpoints.between("sm", "md")]: {
+        paddingLeft: "60px",
+        paddingRight: "60px"
+    },
+    [baseTheme.breakpoints.down("sm")]: {
+        paddingLeft: "40px",
+        paddingRight: "40px"
+    }
+};
+
+export const theme = {
+    typography: {
+        h1: {
+            fontSize: "4rem",
+            fontWeight: "400",
+            [baseTheme.breakpoints.between("sm", "lg")]: {
+                fontSize: "3rem",
+                fontWeight: "450"
+            },
+            [baseTheme.breakpoints.down("sm")]: {
+                fontSize: "2rem",
+                fontWeight: "475"
+            }
+        },
+        h2: {
+            fontSize: "1.75rem",
+            fontWeight: "500",
+            lineHeight: "3.25rem",
+            [baseTheme.breakpoints.between("sm", "lg")]: {
+                fontSize: "1.5rem",
+                lineHeight: "3rem"
+            },
+            [baseTheme.breakpoints.down("sm")]: {
+                fontSize: "1.25rem",
+                lineHeight: "2.5rem"
+            }
+        },
+        h3: {
+            fontSize: "1rem",
+            fontWeight: "500",
+            lineHeight: "2rem",
+            color: accentColor1
+        }
     },
     components: {
         MuiAppBar: {
             styleOverrides: {
                 root: {
                     color: primaryColor,
-                    paddingLeft: contentHorizontalPadding,
-                    paddingRight: contentHorizontalPadding,
                     backgroundColor: secondaryColor,
                     boxShadow: "none",
                     height: "4rem",
-                    justifyContent: "center"
+                    justifyContent: "center",
+                    ...contentHorizontalPadding
                 }
             }
         },
