@@ -2,9 +2,9 @@ import { styled } from "@mui/system";
 import { accentColor2, appBarHeight, contentHorizontalPadding, secondaryColor } from "../theme";
 
 const Section = styled("section")(({ variant }) => ({
-    paddingBottom: "1.25rem",
+    paddingTop: appBarHeight,
     ...contentHorizontalPadding,
-    margin: `${appBarHeight} 0rem 0rem 0rem`,
+    paddingBottom: "6rem",
     ...(variant === "even" && {
         backgroundColor: accentColor2
     }),

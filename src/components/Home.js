@@ -6,12 +6,12 @@ import Section from "./Section";
 import { externalLinks } from "../data";
 import { evenOrOdd } from "../convenienceFunctions";
 
-const Home = ({ sectionInfo, scrollToProjects }) =>
-  <Section variant={evenOrOdd(sectionInfo.index + 1)} id={sectionInfo.id}>
+const Home = ({ sectionInfo: { index, id }, scrollToProjects }) =>
+  <Section variant={evenOrOdd(index + 1)} id={id}>
     <Stack direction={{ sm: "column", md: "row" }}
       spacing={{ xxs: "1.5rem", md: "2rem" }}
       alignItems={{ sm: "flex-start", md: "flex-end" }}
-      sx={{ pt: "6rem", pb: "4.75em" }}>
+      sx={{ pt: "6rem", pb: "4em" }}>
       <Typography variant="h1" sx={{ flex: 1 }}>
         Samantha Gatt
       </Typography>

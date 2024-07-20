@@ -10,7 +10,7 @@ import GitHubLogo from "./GitHubLogo.js";
 import { externalLinks } from "../../data.js";
 import SourceCodeIcon from "../SourceCodeIcon.js";
 
-const SocialLinks = ({ sx = [] }) =>
+const ExternalLinks = ({ sx = [] }) =>
   <Stack direction="row" spacing="1rem" justifyContent="center" sx={sx}>
     <Button
       component="a"
@@ -38,12 +38,12 @@ const Nav = ({ sectionIds, scrollToSection }) => {
   const mdUpBreakpoint = useMediaQuery(theme.breakpoints.up("md"));
   const [menuDisplayed, setMenuDisplayed] = useState(false);
 
-  const NavButtons = () =>
-    sectionIds.map(id => <>
-      <Button onClick={() => scrollToSection(id)} key={id}>
-        {id.charAt(0).toUpperCase() + id.slice(1)}
-      </Button>
-    </>);
+  const NavButtons = () => sectionIds.map(id =>
+    <Button onClick={() => scrollToSection(id)} key={id}>
+      {id.charAt(0).toUpperCase() + id.slice(1)}
+    </Button>
+  );
+
   const MenuButton = () =>
     <IconButton aria-label="menu" onClick={() => setMenuDisplayed(true)}>
       <MenuIcon color="primary" sx={{ height: "2rem", width: "auto" }} />
@@ -59,7 +59,7 @@ const Nav = ({ sectionIds, scrollToSection }) => {
             {<NavButtons />}
           </Stack>}
       </Stack>
-      {mdUpBreakpoint ? <SocialLinks /> : <MenuButton theme={theme} />}
+      {mdUpBreakpoint ? <ExternalLinks /> : <MenuButton theme={theme} />}
       {!mdUpBreakpoint &&
         <SwipeableDrawer open={menuDisplayed}
           anchor="right"
@@ -67,7 +67,7 @@ const Nav = ({ sectionIds, scrollToSection }) => {
           onOpen={() => setMenuDisplayed(true)}>
           <Stack component="nav" spacing="2rem" sx={{ p: "2rem 3rem" }}>
             <NavButtons />
-            <SocialLinks sx={{ pt: "1rem" }} />
+            <ExternalLinks sx={{ pt: "1rem" }} />
           </Stack>
         </SwipeableDrawer>}
     </Toolbar>

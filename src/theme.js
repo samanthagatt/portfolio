@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/system";
+import { createTheme, fontSize, fontWeight } from "@mui/system";
 
 export const primaryColor = "rgb(0, 0, 0)";
 export const secondaryColor = "rgb(255, 255, 255)";
@@ -86,6 +86,22 @@ export const theme = {
             fontWeight: "500",
             lineHeight: "2rem",
             color: accentColor1
+        },
+        h4: {
+            fontSize: "1.75rem",
+            fontWeight: "450",
+            [baseTheme.breakpoints.between("sm", "lg")]: {
+                fontSize: "1.5rem"
+            },
+            [baseTheme.breakpoints.down("sm")]: {
+                fontSize: "1.25rem"
+            }
+        },
+        body1: {
+            fontWeight: 350
+        },
+        body2: {
+            fontWeight: 300
         }
     },
     components: {

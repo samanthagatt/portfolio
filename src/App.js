@@ -9,23 +9,34 @@ import Home from "./components/Home";
 import Section from "./components/Section";
 
 import "./App.css";
+import Experience from "./components/Experience";
 
 const homeSection = {
     id: "home",
-    component: (id, index) => <Home key={index} sectionInfo={{ "id": id, "index": index }}
-    scrollToProjects={() => scrollToSection(projectsSection.id)} />
+    component: (info) =>
+        <Home sectionInfo={info}
+            scrollToProjects={() => scrollToSection(projectsSection.id)}
+            key={info.index} />
 };
 const projectsSection = {
     id: "projects",
-    component: (id, index) => <Section variant={evenOrOdd(index+1)} id={id} className="full-screen" key={index}></Section>
+    component: (info) =>
+        <Section variant={evenOrOdd(info.index + 1)}
+            id={info.id}
+            className="full-screen"
+            key={info.index} />
 };
 const experienceSection = {
     id: "experience",
-    component: (id, index) => <Section variant={evenOrOdd(index+1)} id={id} className="full-screen" key={index}></Section>
+    component: (info) => <Experience sectionInfo={info} key={info.index} />
 };
 const skillsSection = {
     id: "skills",
-    component: (id, index) => <Section variant={evenOrOdd(index+1)} id={id} className="full-screen" key={index}></Section>
+    component: (info) =>
+        <Section variant={evenOrOdd(info.index + 1)}
+            className="full-screen"
+            id={info.id}
+            key={info.index} />
 };
 const sections = [homeSection, projectsSection, experienceSection, skillsSection];
 
@@ -38,7 +49,8 @@ const App = () =>
         <ThemeProvider theme={createTheme(baseTheme, theme)}>
             <Nav sectionIds={sections.map((section) => section.id)}
                 scrollToSection={scrollToSection} />
-            {sections.map((section, index) => section.component(section.id, index))}
+            {sections.map((section, index) =>
+                section.component({ id: section.id, index: index }))}
         </ThemeProvider>
     </StyledEngineProvider>;
 
