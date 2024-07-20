@@ -10,6 +10,7 @@ import Section from "./components/Section";
 
 import "./App.css";
 import Experience from "./components/Experience";
+import Projects from "./components/Projects";
 
 const homeSection = {
     id: "home",
@@ -20,11 +21,7 @@ const homeSection = {
 };
 const projectsSection = {
     id: "projects",
-    component: (info) =>
-        <Section variant={evenOrOdd(info.index + 1)}
-            id={info.id}
-            className="full-screen"
-            key={info.index} />
+    component: (info) => <Projects sectionInfo={info} />
 };
 const experienceSection = {
     id: "experience",

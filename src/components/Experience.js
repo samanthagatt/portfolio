@@ -1,9 +1,9 @@
 import React from "react";
 import { Typography } from "@mui/material";
+import { Stack } from "@mui/system";
 
 import { evenOrOdd } from "../convenienceFunctions";
 import Section from "./Section";
-import { Stack } from "@mui/system";
 
 
 const workItemData = [
