@@ -40,11 +40,11 @@ const educationItemData = [
 const ExperienceColumn = ({ title, items }) =>
     <Stack sx={{ flex: 1 }} spacing="1.5rem" >
         <Typography variant="h4">{title}</Typography>
-        <Stack spacing="1.25rem">{items}</Stack>
+        <Stack spacing="1.5rem">{items}</Stack>
     </Stack>;
 
 const ExperienceItem = ({ primary, secondary }) =>
-    <Stack spacing="0.5rem">
+    <Stack spacing="0.3rem">
         <Typography>{primary}</Typography>
         <Typography variant="body2">{secondary}</Typography>
     </Stack>;

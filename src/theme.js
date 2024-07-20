@@ -3,7 +3,7 @@ import { createTheme, fontSize, fontWeight } from "@mui/system";
 export const primaryColor = "rgb(0, 0, 0)";
 export const secondaryColor = "rgb(255, 255, 255)";
 export const accentColor1 = "rgb(158, 158, 158)";
-export const accentColor2 = "rgb(249, 249, 242)";
+export const accentColor2 = "rgb(245, 245, 240)";
 
 export const appBarHeight = "4rem";
 
@@ -154,7 +154,7 @@ export const theme = {
                     borderRadius: "0rem",
                     "&:hover": {
                         color: accentColor1,
-                        backgroundColor: secondaryColor
+                        backgroundColor: "transparent"
                     }
                 },
                 contained: {
@@ -164,8 +164,9 @@ export const theme = {
                 },
                 outlined: {
                     borderWidth: "0.1rem",
+                    borderColor: primaryColor,
                     "&:hover": {
-                        backgroundColor: secondaryColor,
+                        backgroundColor: "transparent",
                         borderWidth: "0.1rem",
                         borderColor: accentColor1,
                         color: accentColor1

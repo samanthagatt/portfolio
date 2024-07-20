@@ -4,7 +4,7 @@ import { createTheme } from '@mui/material/styles';
 
 import { evenOrOdd } from "./convenienceFunctions";
 import { baseTheme, theme } from "./theme";
-import Nav from "./components/Nav/Nav";
+import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Section from "./components/Section";
 
@@ -21,7 +21,7 @@ const homeSection = {
 };
 const projectsSection = {
     id: "projects",
-    component: (info) => <Projects sectionInfo={info} />
+    component: (info) => <Projects sectionInfo={info} key={info.index} />
 };
 const experienceSection = {
     id: "experience",

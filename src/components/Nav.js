@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { AppBar, Toolbar, SwipeableDrawer, IconButton, Divider, Button } from "@mui/material";
+import { AppBar, Toolbar, SwipeableDrawer, IconButton, Button } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import { Stack, useMediaQuery } from "@mui/system";
 import { useTheme } from "@emotion/react";
 
-import SGLogo from "./SGLogo.js";
-import LinkedInLogo from "./LinkedInLogo.js";
-import GitHubLogo from "./GitHubLogo.js";
-import { externalLinks } from "../../data.js";
-import SourceCodeIcon from "../SourceCodeIcon.js";
+import SGIcon from "./SGIcon.js";
+import LinkedInIcon from "./LinkedInIcon.js";
+import GitHubIcon from "./GitHubIcon.js";
+import { externalLinks } from "../data.js";
+import SourceCodeIcon from "./SourceCodeIcon.js";
 
 const ExternalLinks = ({ sx = [] }) =>
   <Stack direction="row" spacing="1rem" justifyContent="center" sx={sx}>
@@ -23,13 +23,13 @@ const ExternalLinks = ({ sx = [] }) =>
       href={externalLinks.linkedIn}
       target="_blank"
       rel="noopener noreferrer">
-      <LinkedInLogo height="1.75rem" />
+      <LinkedInIcon height="1.75rem" />
     </Button>
     <Button component="a"
       href={externalLinks.gitHub}
       target="_blank"
       rel="noopener noreferrer">
-      <GitHubLogo height="1.75rem" />
+      <GitHubIcon height="1.75rem" />
     </Button>
   </Stack>;
 
@@ -38,8 +38,13 @@ const Nav = ({ sectionIds, scrollToSection }) => {
   const mdUpBreakpoint = useMediaQuery(theme.breakpoints.up("md"));
   const [menuDisplayed, setMenuDisplayed] = useState(false);
 
+  function onNavButtonClick(id) {
+    scrollToSection(id)
+    setMenuDisplayed(false)
+  }
+
   const NavButtons = () => sectionIds.map(id =>
-    <Button onClick={() => scrollToSection(id)} key={id}>
+    <Button onClick={() => onNavButtonClick(id)} key={id}>
       {id.charAt(0).toUpperCase() + id.slice(1)}
     </Button>
   );
@@ -53,7 +58,7 @@ const Nav = ({ sectionIds, scrollToSection }) => {
     <Toolbar sx={{ justifyContent: "space-between" }}>
       <Stack direction="row" spacing="2rem">
         {/* Adding some padding to the top of the sg logo to make up for the descender of the g */}
-        <SGLogo height="2.5rem" style={{ paddingTop: "0.5rem" }} />
+        <SGIcon height="2.5rem" style={{ paddingTop: "0.5rem" }} />
         {mdUpBreakpoint &&
           <Stack component="nav" direction="row" spacing="1.25rem">
             {<NavButtons />}
