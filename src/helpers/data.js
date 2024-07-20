@@ -75,6 +75,21 @@ export const education = [
   }
 ];
 
+export const skills = [
+  {
+      title: "Languages",
+      elements: ["Swift", "Objective-C", "Groovy", "C", "Python", "JavaScript", "HTML", "CSS"]
+  },
+  {
+      title: "Libraries",
+      elements: ["UIKit", "SwiftUI", "Combine", "HealthKit", "ARKit", "AVFoundation", "CoreData", "Realm", "Vapor (Server-Side Swift)", "React", "Material UI"]
+  },
+  {
+      title: "Additional",
+      elements: ["Firebase", "Azure", "Jenkins", "Fastlane", "Git", "Unit and UI testing", "REST APIs", "Network requests", "Algorithms and data structures", "Design patterns", "Pair programming"]
+  }
+]
+
 export const footerLInks = [
   {
     name: "GitHub", 

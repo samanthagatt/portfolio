@@ -178,6 +178,13 @@ export const theme = {
                     }
                 }
             }
+        },
+        MuiListItem: {
+            styleOverrides: {
+                root: {
+                    paddingLeft: 0
+                }
+            }
         }
     }
 };
