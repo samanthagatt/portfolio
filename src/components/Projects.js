@@ -2,8 +2,8 @@ import React from "react";
 import { Typography, Button } from "@mui/material";
 import { Stack } from "@mui/system";
 
-import { evenOrOdd } from "../convenienceFunctions";
-import { projects } from "../data";
+import { evenOrOdd } from "../helpers/convenienceFunctions";
+import { projects } from "../helpers/data";
 import Section from "./Section";
 import SourceCodeIcon from "./SourceCodeIcon";
 import AppStoreIcon from "./AppStoreIcon";
@@ -42,7 +42,7 @@ const secondHalf = projects.slice(halfway)
 
 const Projects = ({ sectionInfo: { id, index } }) =>
     <Section variant={evenOrOdd(index + 1)} id={id}>
-        <Stack spacing="2.25rem" sx={{ pt: "3rem" }}>
+        <Stack spacing="2.25rem">
             <Typography variant="h4">Projects</Typography>
             <Stack direction={{ xs: "column", sm: "row" }} spacing={{ xs: "1.25rem", sm: "3rem" }}>
                 <Column items={firstHalf} />

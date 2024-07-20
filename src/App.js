@@ -2,15 +2,14 @@ import React from "react";
 import { StyledEngineProvider, ThemeProvider } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 
-import { evenOrOdd } from "./convenienceFunctions";
-import { baseTheme, theme } from "./theme";
-import Nav from "./components/Nav";
+import { baseTheme, theme } from "./helpers/theme";
+import Header from "./components/Header";
 import Home from "./components/Home";
-import Section from "./components/Section";
+import Projects from "./components/Projects";
+import Experience from "./components/Experience";
+import Skills from "./components/Skills";
 
 import "./App.css";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
 
 const homeSection = {
     id: "home",
@@ -29,11 +28,7 @@ const experienceSection = {
 };
 const skillsSection = {
     id: "skills",
-    component: (info) =>
-        <Section variant={evenOrOdd(info.index + 1)}
-            className="full-screen"
-            id={info.id}
-            key={info.index} />
+    component: (info) => <Skills sectionInfo={info} key={info.index} />
 };
 const sections = [homeSection, projectsSection, experienceSection, skillsSection];
 
@@ -44,7 +39,7 @@ const scrollToSection = (id) => {
 const App = () =>
     <StyledEngineProvider injectFirst>
         <ThemeProvider theme={createTheme(baseTheme, theme)}>
-            <Nav sectionIds={sections.map((section) => section.id)}
+            <Header sectionIds={sections.map((section) => section.id)}
                 scrollToSection={scrollToSection} />
             {sections.map((section, index) =>
                 section.component({ id: section.id, index: index }))}

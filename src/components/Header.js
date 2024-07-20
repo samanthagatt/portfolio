@@ -7,7 +7,7 @@ import { useTheme } from "@emotion/react";
 import SGIcon from "./SGIcon.js";
 import LinkedInIcon from "./LinkedInIcon.js";
 import GitHubIcon from "./GitHubIcon.js";
-import { externalLinks } from "../data.js";
+import { externalLinks } from "../helpers/data.js";
 import SourceCodeIcon from "./SourceCodeIcon.js";
 
 const ExternalLinks = ({ sx = [] }) =>
@@ -33,7 +33,7 @@ const ExternalLinks = ({ sx = [] }) =>
     </Button>
   </Stack>;
 
-const Nav = ({ sectionIds, scrollToSection }) => {
+const Header = ({ sectionIds, scrollToSection }) => {
   const theme = useTheme();
   const mdUpBreakpoint = useMediaQuery(theme.breakpoints.up("md"));
   const [menuDisplayed, setMenuDisplayed] = useState(false);
@@ -79,4 +79,4 @@ const Nav = ({ sectionIds, scrollToSection }) => {
   </AppBar>)
 };
 
-export default Nav;
+export default Header;

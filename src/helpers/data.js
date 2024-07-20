@@ -5,28 +5,6 @@ export const externalLinks = {
   resume: "https://docs.google.com/document/d/1H4CQ3fYosgIbOfVMzZiXn6JbqOz1vHemEbzogNn3xy8/edit?usp=sharing"
 };
 
-
-export const sourceCodeLink = "";
-
-export const footerLInks = [
-  {
-    name: "GitHub", 
-    url: externalLinks.gitHub
-  },
-  {
-    name: "LinkedIn", 
-    url: externalLinks.linkedIn,
-  },
-  {
-    name: "Resume",
-    url: externalLinks.resume
-  },
-  {
-    name: "Source code",
-    url: externalLinks.sourceCode
-  }
-];
-
 export const projects = [
   {
     name: "Electrify America",
@@ -63,5 +41,55 @@ export const projects = [
     name: "Flashcards",
     description: "An app that lets you create and organize flashcards whether they're typed or hand drawn on an iOS device. Made as an independent project during my education at Lambda School.",
     githubLink: "https://github.com/samanthagatt/Flashcards-App"
+  }
+];
+
+export const work = [
+  {
+      title: "Lead iOS Developer",
+      company: "S44 Energy",
+      dateRange: "Sep. 2020 - Feb. 2024"
+  },
+  {
+      title: "iOS Mobile Developer",
+      company: "New Era Technology",
+      dateRange: "Jul. 2019 - Oct. 2019"
+  },
+  {
+      title: "iOS Developer & Technical Lead",
+      company: "Mobile Mentor",
+      dateRange: "Apr. 2019 - Jun. 2019"
+  }
+];
+
+export const education = [
+  {
+      degree: "iOS Development Certificate",
+      institution: "Bloom Institute of Technology",
+      description: "6+ month software development and computer science academy"
+  },
+  {
+      degree: "B.S. in Biology",
+      institution: "Florida Gulf Coast University",
+      description: "Conducted 3+ years of bioinformatic research (analysis of biological data through computer algorithms)"
+  }
+];
+
+export const footerLInks = [
+  {
+    name: "GitHub", 
+    url: externalLinks.gitHub
+  },
+  {
+    name: "LinkedIn", 
+    url: externalLinks.linkedIn,
+  },
+  {
+    name: "Resume",
+    url: externalLinks.resume
+  },
+  {
+    name: "Source code",
+    url: externalLinks.sourceCode
   }
 ];

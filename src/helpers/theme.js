@@ -1,11 +1,11 @@
-import { createTheme, fontSize, fontWeight } from "@mui/system";
+import { createTheme } from "@mui/system";
 
 export const primaryColor = "rgb(0, 0, 0)";
 export const secondaryColor = "rgb(255, 255, 255)";
 export const accentColor1 = "rgb(158, 158, 158)";
 export const accentColor2 = "rgb(245, 245, 240)";
 
-export const appBarHeight = "4rem";
+export const appBarHeightInRem = 4;
 
 export const baseTheme = createTheme({
     breakpoints: {
@@ -37,21 +37,27 @@ export const baseTheme = createTheme({
     }
 });
 
-export const contentHorizontalPadding = {
+export const contentHorizontalPaddingAbvLg = {
     paddingLeft: "130px",
-    paddingRight: "130px",
-    [baseTheme.breakpoints.between("md", "lg")]: {
-        paddingLeft: "100px",
-        paddingRight: "100px"
-    },
-    [baseTheme.breakpoints.between("sm", "md")]: {
-        paddingLeft: "60px",
-        paddingRight: "60px"
-    },
-    [baseTheme.breakpoints.down("sm")]: {
-        paddingLeft: "40px",
-        paddingRight: "40px"
-    }
+    paddingRight: "130px"
+};
+export const contentHorizontalPaddingBtwnMdLg = {
+    paddingLeft: "100px",
+    paddingRight: "100px"
+};
+export const contentHorizontalPaddingBtwnSmMd = {
+    paddingLeft: "60px",
+    paddingRight: "60px"
+};
+export const contentHorizontalPaddingBlwSm = {
+    paddingLeft: "40px",
+    paddingRight: "40px"
+};
+export const contentHorizontalPadding = {
+    [baseTheme.breakpoints.up("lg")]: contentHorizontalPaddingAbvLg,
+    [baseTheme.breakpoints.between("md", "lg")]: contentHorizontalPaddingBtwnMdLg,
+    [baseTheme.breakpoints.between("sm", "md")]: contentHorizontalPaddingBtwnSmMd,
+    [baseTheme.breakpoints.down("sm")]: contentHorizontalPaddingBlwSm
 };
 
 export const theme = {
@@ -84,8 +90,7 @@ export const theme = {
         h3: {
             fontSize: "1rem",
             fontWeight: "500",
-            lineHeight: "2rem",
-            color: accentColor1
+            lineHeight: "2rem"
         },
         h4: {
             fontSize: "1.75rem",
@@ -94,7 +99,7 @@ export const theme = {
                 fontSize: "1.5rem"
             },
             [baseTheme.breakpoints.down("sm")]: {
-                fontSize: "1.25rem"
+                fontSize: "1.4rem"
             }
         },
         body1: {
@@ -111,7 +116,7 @@ export const theme = {
                     color: primaryColor,
                     backgroundColor: secondaryColor,
                     boxShadow: "none",
-                    height: "4rem",
+                    height: appBarHeightInRem + "rem",
                     justifyContent: "center",
                     ...contentHorizontalPadding
                 }
