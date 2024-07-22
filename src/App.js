@@ -10,6 +10,7 @@ import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 
 import "./App.css";
+import Footer from "./components/Footer";
 
 const homeSection = {
     id: "home",
@@ -36,14 +37,17 @@ const scrollToSection = (id) => {
     document.getElementById(id).scrollIntoView({ behavior: "smooth" })
 };
 
-const App = () =>
-    <StyledEngineProvider injectFirst>
-        <ThemeProvider theme={createTheme(baseTheme, theme)}>
-            <Header sectionIds={sections.map((section) => section.id)}
-                scrollToSection={scrollToSection} />
-            {sections.map((section, index) =>
-                section.component({ id: section.id, index: index }))}
-        </ThemeProvider>
-    </StyledEngineProvider>;
+const App = () => {
+    const sectionIds = sections.map((section) => section.id)
+    return (
+        <StyledEngineProvider injectFirst>
+            <ThemeProvider theme={createTheme(baseTheme, theme)}>
+                <Header sectionIds={sectionIds} scrollToSection={scrollToSection} />
+                {sections.map((section, index) =>
+                    section.component({ id: section.id, index: index }))}
+                <Footer sectionIds={sectionIds} onNavButtonClick={scrollToSection} />
+            </ThemeProvider>
+        </StyledEngineProvider>);
+};
 
 export default App;

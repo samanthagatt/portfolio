@@ -2,7 +2,7 @@ export const externalLinks = {
   gitHub: "https://github.com/samanthagatt",
   sourceCode: "https://github.com/samanthagatt/portfolio/tree/master",
   linkedIn: "https://www.linkedin.com/in/samantha-gatt/",
-  resume: "https://docs.google.com/document/d/1H4CQ3fYosgIbOfVMzZiXn6JbqOz1vHemEbzogNn3xy8/edit?usp=sharing"
+  resume: "https://docs.google.com/document/d/1D6nCrsr3SUI0taqZWhLgfPdYK7Db08MaJNsO-fRpvRQ/edit?usp=sharing"
 };
 
 export const projects = [
@@ -12,6 +12,11 @@ export const projects = [
     appStoreLink: "https://apps.apple.com/us/app/electrify-america/id1458030456"
   },
   {
+    name: "Simple Networking",
+    description: "Swift Package to simplify making network requests. Made with use cases using JSON responses and OAuth 2.0 for authentication in mind, but hopefully customizable for other use cases as well. Uses a development snapshot of Swift so it can utilize throwing specific error types. Currently in refinement.",
+    githubLink: "https://github.com/samanthagatt/SimpleNetworking"
+  },
+  {
     name: "Paint a Pic", 
     description: "A fun puzzle game where you reveal a pixelated picture by logically filling in squares on a grid based on the puzzle's rules",
     githubLink: "https://github.com/samanthagatt/Nonograms",
@@ -19,7 +24,7 @@ export const projects = [
   },
   {
     name: "Dream App", 
-    description: "An app that allows users to record themselves retelling their dreams. ~ In the works: transcribing the audio into text, and sharing dreams with friends.",
+    description: "An app that allows users to record themselves retelling their dreams.",
     githubLink: "https://github.com/samanthagatt/Dream-App-iOS",
   },
   {
@@ -28,18 +33,13 @@ export const projects = [
     githubLink: "https://github.com/samanthagatt/CopyList"
   },
   {
-    name: "Simple Networking",
-    description: "A wrapper over URLSession to remove the need for a lot of boiler plate code everytime you want to make a network request. Currently in refinement.",
-    githubLink: "https://github.com/samanthagatt/SimpleNetworking"
-  },
-  {
     name: "Facial Exercises",
     description: "An app made during a 2-day hackathon that mimicks post-stroke exercises using ARKit to track movement of specific facial features.",
     githubLink: "https://github.com/vukrado/Facial-Exercises"
   },
   {
     name: "Flashcards",
-    description: "An app that lets you create and organize flashcards whether they're typed or hand drawn on an iOS device. Made as an independent project during my education at Lambda School.",
+    description: "An app that lets you create and organize flashcards whether they're typed or hand drawn on an iOS device. Made as an independent project during my education at Lambda School (Now Bloom Institute of Technology).",
     githubLink: "https://github.com/samanthagatt/Flashcards-App"
   }
 ];
@@ -78,15 +78,15 @@ export const education = [
 export const skills = [
   {
       title: "Languages",
-      elements: ["Swift", "Objective-C", "Groovy", "C", "Python", "JavaScript", "HTML", "CSS"]
+      elements: ["Swift", "Objective-C", "Groovy", "C", "Java", "Python", "JavaScript", "HTML", "CSS"]
   },
   {
       title: "Libraries",
-      elements: ["UIKit", "SwiftUI", "Combine", "HealthKit", "ARKit", "AVFoundation", "CoreData", "Realm", "Vapor (Server-Side Swift)", "React", "Material UI"]
+      elements: ["UIKit", "SwiftUI", "HealthKit", "ARKit", "AVFoundation", "CoreData", "Vapor (Server-Side Swift)", "React", "Material UI"]
   },
   {
       title: "Additional",
-      elements: ["Firebase", "Azure", "Jenkins", "Fastlane", "Git", "Unit and UI testing", "REST APIs", "Network requests", "Algorithms and data structures", "Design patterns", "Pair programming"]
+      elements: ["Git", "Firebase", "Azure", "Jenkins", "Fastlane", "Unit and UI testing", "Network requests", "REST APIs", "Algorithms and data structures", "Design patterns", "Pair programming"]
   }
 ]
 
