@@ -1,1 +1,1 @@
-export const evenOrOdd = (num) => num % 2 == 0 ? "even" : "odd";
+export const evenOrOdd = (num) => num % 2 === 0 ? "even" : "odd";
