@@ -88,7 +88,7 @@ export const skills = [
       title: "Additional",
       elements: ["Git", "Firebase", "Azure", "Jenkins", "Fastlane", "Unit and UI testing", "Network requests", "REST APIs", "Algorithms and data structures", "Design patterns", "Pair programming"]
   }
-]
+];
 
 export const footerLInks = [
   {

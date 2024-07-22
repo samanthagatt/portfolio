@@ -9,6 +9,6 @@ const SourceCodeIcon = ({ width = "auto", height = "auto", style = {} }) =>
         <g transform="matrix(-1.00045,-0.000157127,0.000157146,-1.00032,1033.6,828.147)">
             <path d="M666.34,303.839L735.988,233.956L1033.23,530.79L736.122,827.764L666.346,757.851L893.244,530.882L666.34,303.839Z" />
         </g>
-    </svg>
+    </svg>;
 
 export default SourceCodeIcon;

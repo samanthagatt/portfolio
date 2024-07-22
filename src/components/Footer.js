@@ -24,7 +24,7 @@ const Footer = ({ sectionIds, onNavButtonClick }) => {
             sx={{
                 bgcolor: theme.palette.primary.main,
                 color: theme.palette.secondary.main,
-                ...contentHorizontalPadding(),
+                ...contentHorizontalPadding,
                 paddingTop: "2rem",
                 paddingBottom: "1.5rem"
             }}>
@@ -63,6 +63,6 @@ const Footer = ({ sectionIds, onNavButtonClick }) => {
             </PaddedGrid>
         </Grid>
     );
-}
+};
 
 export default Footer;

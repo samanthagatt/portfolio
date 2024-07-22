@@ -1,4 +1,4 @@
-import { createTheme, fontWeight } from "@mui/system";
+import { createTheme } from "@mui/system";
 
 export const primaryColor = "rgb(0, 0, 0)";
 export const secondaryColor = "rgb(255, 255, 255)";
@@ -37,45 +37,45 @@ export const baseTheme = createTheme({
     }
 });
 
-export const contentHorizontalPaddingAbvLg = (pxPaddingForGrid = 0) => ({
-    paddingLeft: 130 + pxPaddingForGrid + "px",
+export const contentHorizontalPaddingAbvLg = {
+    paddingLeft: 130 + "px",
     paddingRight: 130 + "px"
-});
-export const contentHorizontalPaddingBtwnMdLg = (pxPaddingForGrid = 0) => ({
-    paddingLeft: 100 + pxPaddingForGrid + "px",
+};
+export const contentHorizontalPaddingBtwnMdLg = {
+    paddingLeft: 100 + "px",
     paddingRight: 100 + "px"
-});
-export const contentHorizontalPaddingBtwnSmMd = (pxPaddingForGrid = 0) => ({
-    paddingLeft: 60 + pxPaddingForGrid + "px",
+};
+export const contentHorizontalPaddingBtwnSmMd = {
+    paddingLeft: 60 + "px",
     paddingRight: 60 + "px"
-});
-export const contentHorizontalPaddingBlwSm = (pxPaddingForGrid = 0) => ({
-    paddingLeft: 40 + pxPaddingForGrid + "px",
+};
+export const contentHorizontalPaddingBlwSm = {
+    paddingLeft: 40 + "px",
     paddingRight: 40 + "px"
-});
-export const contentHorizontalPadding = (pxPaddingForGrid) => ({
-    [baseTheme.breakpoints.up("lg")]: contentHorizontalPaddingAbvLg(pxPaddingForGrid),
-    [baseTheme.breakpoints.between("md", "lg")]: contentHorizontalPaddingBtwnMdLg(pxPaddingForGrid),
-    [baseTheme.breakpoints.between("sm", "md")]: contentHorizontalPaddingBtwnSmMd(pxPaddingForGrid),
-    [baseTheme.breakpoints.down("sm")]: contentHorizontalPaddingBlwSm(pxPaddingForGrid)
-});
-export const sectionPadding = (pxPaddingForGrid = 0) => ({
-    ...contentHorizontalPadding(pxPaddingForGrid),
+};
+export const contentHorizontalPadding = {
+    [baseTheme.breakpoints.up("lg")]: contentHorizontalPaddingAbvLg,
+    [baseTheme.breakpoints.between("md", "lg")]: contentHorizontalPaddingBtwnMdLg,
+    [baseTheme.breakpoints.between("sm", "md")]: contentHorizontalPaddingBtwnSmMd,
+    [baseTheme.breakpoints.down("sm")]: contentHorizontalPaddingBlwSm
+};
+export const sectionPadding = {
+    ...contentHorizontalPadding,
     [baseTheme.breakpoints.up("md")]: {
         paddingBottom: "6rem",
         paddingTop: `${appBarHeightInRem + 3}rem`
     },
     [baseTheme.breakpoints.between("sm", "md")]: {
-        ...contentHorizontalPaddingBtwnSmMd(pxPaddingForGrid),
+        ...contentHorizontalPaddingBtwnSmMd,
         paddingBottom: "5rem",
         paddingTop: `${appBarHeightInRem + 3}rem`
     },
     [baseTheme.breakpoints.down("sm")]: {
-        ...contentHorizontalPaddingBlwSm(pxPaddingForGrid),
+        ...contentHorizontalPaddingBlwSm,
         paddingBottom: "4rem",
         paddingTop: `${appBarHeightInRem + 2}rem`
     }
-})
+};
 
 export const theme = {
     typography: {
@@ -135,7 +135,7 @@ export const theme = {
                     boxShadow: "none",
                     height: appBarHeightInRem + "rem",
                     justifyContent: "center",
-                    ...contentHorizontalPadding()
+                    ...contentHorizontalPadding
                 }
             }
         },

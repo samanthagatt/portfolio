@@ -3,8 +3,8 @@ import { Typography } from "@mui/material";
 import { Stack } from "@mui/system";
 
 import { evenOrOdd } from "../helpers/convenienceFunctions";
-import Section from "./Section";
 import { education, work } from "../helpers/data";
+import Section from "./Section";
 
 const ExperienceColumn = ({ title, items }) =>
     <Stack sx={{ flex: 1 }} spacing="1.5rem" >

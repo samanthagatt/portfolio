@@ -22,9 +22,9 @@ const Column = ({ group: { title, elements } }) =>
                     </Stack>
                 </ListItem>)}
         </List>
-    </Stack>
+    </Stack>;
 
-const Skills = ({ sectionInfo: { id, index } }) => {
+const Skills = ({ sectionInfo: { id, index } }) =>
     /*
     Grid uses a negative margin so you have to add the same spacing to the 
     https://stackoverflow.com/a/61800046
@@ -33,13 +33,10 @@ const Skills = ({ sectionInfo: { id, index } }) => {
     Adding `spacing` to the `Grid` container and `paddingPx` to the left and bottom of the `Section` padding made everything align but it didn't work for the footer
     ** Too inconsistent of behavior for me so I'm just avoiding spacing for now
     */
-    return (
-        <Section variant={evenOrOdd(index + 1)} id={id}>
-            <Grid container>
-                {skills.map((group, i) => <Column group={group} key={i} />)}
-            </Grid>
-        </Section>
-    );
-};
+    <Section variant={evenOrOdd(index + 1)} id={id}>
+        <Grid container>
+            {skills.map((group, i) => <Column group={group} key={i} />)}
+        </Grid>
+    </Section>;
 
 export default Skills;

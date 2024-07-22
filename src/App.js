@@ -8,9 +8,9 @@ import Home from "./components/Home";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
+import Footer from "./components/Footer";
 
 import "./App.css";
-import Footer from "./components/Footer";
 
 const homeSection = {
     id: "home",
